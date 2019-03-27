@@ -7,7 +7,7 @@ import org.junit.Test;
  * 集合处理工具类有点鸡助跟JDK的java.util.Arrays差不多
  * 
  * @author zhanchaohan
- *
+ *https://commons.apache.org/proper/commons-lang/javadocs/api-release/index.html
  */
 public class Demo {
 	// 添加数据
