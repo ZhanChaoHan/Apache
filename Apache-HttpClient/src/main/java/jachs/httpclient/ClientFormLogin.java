@@ -53,7 +53,7 @@ public class ClientFormLogin {
                 .setDefaultCookieStore(cookieStore)
                 .build();
         try {
-            HttpGet httpget = new HttpGet("https://someportal/");
+            HttpGet httpget = new HttpGet("http://localhost:8080/my");
             CloseableHttpResponse response1 = httpclient.execute(httpget);
             try {
                 HttpEntity entity = response1.getEntity();
@@ -75,9 +75,9 @@ public class ClientFormLogin {
             }
 
             HttpUriRequest login = RequestBuilder.post()
-                    .setUri(new URI("https://someportal/"))
-                    .addParameter("IDToken1", "username")
-                    .addParameter("IDToken2", "password")
+                    .setUri(new URI("http://localhost:8080/my"))
+                    .addParameter("name", "username")
+                    .addParameter("pwd", "password")
                     .build();
             CloseableHttpResponse response2 = httpclient.execute(login);
             try {
