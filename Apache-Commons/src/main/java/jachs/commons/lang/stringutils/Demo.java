@@ -16,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
 /**
+ * apache的东西就是功能强大顶呱呱！！！
  * @author zhanchaohan
  * 
  */
@@ -226,6 +227,85 @@ public class Demo {
         System.out.println (StringUtils.indexOfIgnoreCase("aFabbSSdd","f",1));//返回1
         System.out.println (StringUtils.lastIndexOfIgnoreCase("",""));//0
         System.out.println (StringUtils.lastIndexOfIgnoreCase("","",2));//0
+    }
+    //
+    @Test
+    public void testAlpha() {
+        //判断是否只包含unicode字符（注意：汉字也是unicode字符）
+        System.out.println ( StringUtils.isAlpha ( "爱我中华" ) );//true
+        System.out.println ( StringUtils.isAlpha ( "爱我 大中华" ) );//false
+        System.out.println ( StringUtils.isAlpha ( "&*(" ) );//false
+        //判断是否只包含unicode字符及空格
+        System.out.println ( StringUtils.isAlphaSpace ( "爱我中华" ) );//true
+        System.out.println ( StringUtils.isAlphaSpace ( "爱我 大中华" ) );//true
+        System.out.println ( StringUtils.isAlphaSpace ( "123456" ) );//false
+        //判断是否只包含unicode字符、数字及空格
+        System.out.println ( StringUtils.isAlphanumeric("中国8681") );//true
+        //判断是否只包含unicode字符、数字及空格
+        System.out.println ( StringUtils.isAlphanumericSpace("1 2 3 4 5 6") );//true
+        System.out.println ( StringUtils.isAlphanumericSpace("一二三四五六") );//true
+        System.out.println ( StringUtils.isAlphanumericSpace("1 2 3 4 5 6 一<") );//false
+        //判断是否只包含数字及空格
+        System.out.println ( StringUtils.isNumericSpace ( "1 2 3 4 5   6" ) );//true
+        System.out.println ( StringUtils.isNumericSpace ( "1 2 3 4 5  五  6" ) );//false
+        //判断是否只包含可打印的ascii码字符（注意，空格不属于范围内）
+        System.out.println ( StringUtils.isAsciiPrintable("aAbBcC") );//true
+        //判断是否为数字（注意：小数点和正负号，都会判定为false）
+        System.out.println ( StringUtils.isNumeric("123456") );//true
+        System.out.println ( StringUtils.isNumeric("123456o") );//false
+        //判定是否只包括空白字符
+        System.out.println ( StringUtils.isWhitespace(" ") );//true
+        System.out.println ( StringUtils.isWhitespace("") );//true
+        System.out.println ( StringUtils.isWhitespace(null) );//false
+        System.out.println ( StringUtils.isWhitespace("空") );//false
+        //判定是否全部为大写
+        System.out.println ( StringUtils.isAllUpperCase("ABCDE") );//true
+        System.out.println ( StringUtils.isAllUpperCase("Abcde") );//false
+        System.out.println ( StringUtils.isAllUpperCase("abcde") );//false
+        //判定是否全部为小写
+        System.out.println ( StringUtils.isAllLowerCase("") );
+        //判定是否混合大小写（注意：包含其他字符，如空格，不影响结果判定）
+        System.out.println ( StringUtils.isMixedCase("AAAAAA") );//false
+        System.out.println ( StringUtils.isMixedCase("AAAAAAbbbbbb") );//true
+    }
+    //起止字符判定
+    @Test
+    public void testStartsWith() {
+        System.out.println ( StringUtils.startsWith ( "abc", "abc" ) );//true
+        System.out.println ( StringUtils.startsWith ( "aBc", "abc" ) );//false
+        System.out.println ( StringUtils.startsWith ( "ABC", "abc" ) );//false
+        //不区分大小写
+        System.out.println ( StringUtils.startsWithIgnoreCase ( "abc", "abc" ) );//true
+        System.out.println ( StringUtils.startsWithIgnoreCase ( "aBc", "abc" ) );//true
+        System.out.println ( StringUtils.startsWithIgnoreCase ( "ABC", "abc" ) );//true
+        //字符串以数组中的字符串开始
+        System.out.println ( StringUtils.startsWithAny ( "abc", new String[] {"abc","aBc","ABC"} ) );//true
+        System.out.println ( StringUtils.startsWithAny ( "aBc", new String[] {"abc","aaa","bbb"} ) );//false
+        System.out.println ( StringUtils.startsWithAny ( "ABC", new String[] {"bbb","ccc","aaa"} ) );//false
+    }
+    @Test
+    //不解释了同上一个开头一个结尾
+    public void testEndsWith() {
+    }
+    //替换字符串:把text中的searchString替换成replacement，max是最大替换次数，默认是替换所有
+    @Test
+    public void testReplace() {
+        System.out.println ( StringUtils.replace ("sshhhs","ss","p" ) );//全部替换--->结果是：phhhs
+        System.out.println ( StringUtils.replace ("sshhhsshss","ss","7777",2 ) );//max：最大替换次数-->结果是：7777hhh7777hss
+        //替换一次
+        System.out.println ( StringUtils.replaceOnce ( "sshhhss","ss","p" ) );//只替换一次-->结果是：phhhss
+        System.out.println ( StringUtils.replaceOnceIgnoreCase ( "Sshhhss","ss","p" ) );//不区分大小写,phhhss
+        //替换全部，马上被放弃的方法
+        System.out.println ( StringUtils.replaceAll ( "aabbccddaabbccaabb", "aa", "11" ) );//11bbccdd11bbcc11bb
+        //替换单字符
+        System.out.println (  StringUtils.replaceChars ( "abcdeabcdeabcdeaaa", "a", "2" ));//2bcde2bcde2bcde222
+        //替换全部char one by one暂时看不出和replace有什么区别
+        System.out.println ( StringUtils.replaceChars ( "abcabcabcabc", "abc", "123" ) );//123123123123
+        //替换第一个匹配字符串，马上放弃的方法
+        System.out.println ( StringUtils.replaceFirst ( "abcabcabcabc", "abc", "ABC" ) );//ABCabcabcabc
+        //不区分大小写
+        System.out.println ( StringUtils.replaceIgnoreCase ( "AbcabCaBc", "abc", "^_^" ) );//^_^^_^^_^
+        System.out.println ( StringUtils.replaceIgnoreCase ( "AbcabCaBc", "abc", "^_^" , 2 ) );//^_^^_^aBc
     }
     public static void main ( String[] args ) {
         
