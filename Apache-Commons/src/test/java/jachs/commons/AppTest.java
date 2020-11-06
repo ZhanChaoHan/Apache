@@ -1,4 +1,4 @@
-package jachs.commons.Apache_Commons;
+package jachs.commons;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
