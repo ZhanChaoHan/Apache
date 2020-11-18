@@ -14,11 +14,17 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/***
+ * 
+ * @author zhanchaohan
+ *
+ */
 public class ReadExcelUtill {
 	private final static String xls = "xls";  
     private final static String xlsx = "xlsx";  
     private static Workbook workbook = null;
-    public void  getWorkBook(File file) {  
+    
+    public   ReadExcelUtill(File file) {  
         try {  
             InputStream is = new FileInputStream(file);  
             if(file.getName().endsWith(xls)){  
@@ -54,7 +60,7 @@ public class ReadExcelUtill {
     }
 
     public void getInfo() {
-    	Sheet sheet= workbook.getSheetAt(3);//获取页码可以根据下标，可以根据名称
+    	Sheet sheet= workbook.getSheetAt(0);//获取页码可以根据下标，可以根据名称
     	for (Row row : sheet) {//变量当前页面下的行
     		Iterator<Cell> cellIter=row.cellIterator();
     		System.out.println("总列数：" + row.getPhysicalNumberOfCells());
