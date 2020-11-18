@@ -47,5 +47,7 @@ public class Demo {
          * count ：创建的随机数长度
          */
         System.out.println(RandomStringUtils.randomAlphanumeric(15));
+        //生成汉字的方法，参考：utf-8汉字的编码范围
+        System.out.println ( RandomStringUtils.random(20, 0x4e00, 0x9fa5, false,false) );
     }
 }
