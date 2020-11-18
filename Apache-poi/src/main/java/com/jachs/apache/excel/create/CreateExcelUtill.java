@@ -29,6 +29,18 @@ import org.springframework.stereotype.Component;
 public class CreateExcelUtill {
 	HSSFWorkbook wb = new HSSFWorkbook();
 	
+	public CreateExcelUtill () {
+        wb=new HSSFWorkbook ();
+    }
+
+    public CreateExcelUtill ( HSSFWorkbook wb ) {
+        super ();
+        this.wb = wb;
+    }
+    
+    public int getLastRowNumber(HSSFSheet ss) {
+        return ss.getLastRowNum ();
+    }
 	/****
 	 * 创建Shell页
 	 * 
