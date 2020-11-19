@@ -20,11 +20,27 @@ import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.ss.usermodel.RichTextString;
 import org.springframework.stereotype.Component;
-
+/****
+ * 
+ * @author zhanchaohan
+ *
+ */
 @Component
 public class CreateExcelUtill {
 	HSSFWorkbook wb = new HSSFWorkbook();
+	
+	public CreateExcelUtill () {
+        wb=new HSSFWorkbook ();
+    }
 
+    public CreateExcelUtill ( HSSFWorkbook wb ) {
+        super ();
+        this.wb = wb;
+    }
+    
+    public int getLastRowNumber(HSSFSheet ss) {
+        return ss.getLastRowNum ();
+    }
 	/****
 	 * 创建Shell页
 	 * 
