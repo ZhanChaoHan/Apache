@@ -78,7 +78,7 @@ public class Test2012Excel {
 
 		Row row1= hs.getRow(1);
 		System.out.println(row1.getCell(0).getStringCellValue());//     单位：财务部
-		row1.getCell(0).setCellValue("单位：财务部-测试组");
+		row1.getCell(0).setCellValue("单位：财务部-测试组");//修改名称
 		
 		
 		hw.write(new File(Test2012Excel.class.getResource("").getPath()+File.separator+"2012年填充表格.xls"));
