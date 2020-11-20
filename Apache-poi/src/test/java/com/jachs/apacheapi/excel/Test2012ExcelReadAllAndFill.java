@@ -36,31 +36,30 @@ public class Test2012ExcelReadAllAndFill {
 			 while(lc.hasNext()) {
 				 Cell ce=lc.next();
 				 switch (ce.getCellType()) {
-				case _NONE :
-					System.out.print("");
-					break;
-				case NUMERIC :
-					System.out.print(ce.getNumericCellValue());
-						break;
-				case STRING :
-					System.out.print(ce.getStringCellValue());
-					break;
-				case FORMULA :
-					System.out.print(ce.getCellFormula());	
-					break;
-				case BLANK :
-					System.out.print("空");	
-					break;
-				case BOOLEAN :
-					System.out.print(ce.getBooleanCellValue());	
-					break;
-				case ERROR :
-					System.out.print(ce.getErrorCellValue());	
-					break;
-				default:
-					break;
+    				case _NONE :
+    					System.out.print("");
+    					break;
+    				case NUMERIC :
+    					System.out.print(ce.getNumericCellValue());
+    						break;
+    				case STRING :
+    					System.out.print(ce.getStringCellValue());
+    					break;
+    				case FORMULA :
+    					System.out.print(ce.getCellFormula());	
+    					break;
+    				case BLANK :
+    					System.out.print("空");	
+    					break;
+    				case BOOLEAN :
+    					System.out.print(ce.getBooleanCellValue());	
+    					break;
+    				case ERROR :
+    					System.out.print(ce.getErrorCellValue());	
+    					break;
+    				default:
+    					break;
 				}
-				 
 			 }
 			 System.out.println();
 		 }
