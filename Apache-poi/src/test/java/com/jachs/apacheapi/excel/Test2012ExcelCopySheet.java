@@ -14,6 +14,7 @@ import org.apache.poi.ss.util.CellRangeAddress;
 import org.junit.Test;
 
 /**
+ * 复制sheet页
  * @author zhanchaohan
  * 
  */
@@ -84,6 +85,5 @@ public class Test2012ExcelCopySheet {
         copySheet.setDefaultRowHeight (cs.getDefaultRowHeight ());//复制默认行高
         copySheet.setDefaultColumnWidth ( cs.getDefaultColumnWidth () );//复制默认表格宽度
         hw.write(new File(Test2012ExcelReadAllAndFill.class.getResource("").getPath()+File.separator+"2012年copySheet表格.xls"));
-        
     }
 }
