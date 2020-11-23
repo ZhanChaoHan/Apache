@@ -46,6 +46,7 @@ public class Test2012ExcelCopySheet {
                 
                 //复制样式
                 Tcell.setCellStyle ( cell.getCellStyle () );
+                
                 //复制文本内容
                 switch (cell.getCellType()) {
                     case _NONE :
@@ -80,6 +81,8 @@ public class Test2012ExcelCopySheet {
         for ( CellRangeAddress cellRangeAddress : craList ) {//开始复制合并单元格
             copySheet.addMergedRegion ( cellRangeAddress );
         }
+        copySheet.setDefaultRowHeight (cs.getDefaultRowHeight ());//复制默认行高
+        copySheet.setDefaultColumnWidth ( cs.getDefaultColumnWidth () );//复制默认表格宽度
         hw.write(new File(Test2012ExcelReadAllAndFill.class.getResource("").getPath()+File.separator+"2012年copySheet表格.xls"));
         
     }
