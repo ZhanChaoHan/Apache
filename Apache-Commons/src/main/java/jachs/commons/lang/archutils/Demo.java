@@ -3,6 +3,7 @@ package jachs.commons.lang.archutils;
 import org.apache.commons.lang3.ArchUtils;
 import org.apache.commons.lang3.arch.Processor;
 import org.junit.Test;
+
 /****
  * os.arch系统属性的实用程序类。类定义了用于标识当前JVM体系结构的方法。
 	重要提示：os.arch系统属性返回由JVM使用的体系结构，而不是操作系统的体系结构。
