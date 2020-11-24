@@ -43,10 +43,21 @@ public class TestExcelInsertRow {
          * endRow:结束行下标
          * startRow-endRow：受影响区间，如果为正数往下同步，如果为负数往上同步
          * n:插入的行数
-         * 如果n为正数则往下插入如果为负数则往上插入。
+                             * 如果n为正数则往下插入如果为负数则往上插入。
          */
 //        testSheet.shiftRows ( 5  ,9 , -2 );//5上推2格顶掉了3 4,5 6 7 8 9同步上推了2格拉开2格距离和10
         testSheet.shiftRows ( 5  ,9 , 2 );//9顶掉了10 11,5-end同步后推了2格
     }
     
+    @Test
+    public void insertRow() {
+        Sheet testSheet=hw.getSheet ( "Sheet2" );
+        
+        int lastRowNum=testSheet.getLastRowNum ();
+        testSheet.shiftRows ( 3  ,lastRowNum , 2 );//从第三行开始插入二条数据
+        
+        testSheet.createRow ( 3 ).createCell ( 0 ).setCellValue ( "插入一行数据列1" );
+//        
+        testSheet.createRow ( 4 ).createCell ( 0 ).setCellValue ( "插入二行数据列1" );
+    }
 }

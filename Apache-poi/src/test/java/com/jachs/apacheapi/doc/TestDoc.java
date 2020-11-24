@@ -19,16 +19,14 @@ public class TestDoc {
         //输出word文档所有的文本 
         System.out.println ( extractor.getText () );
         System.out.println ( extractor.getTextFromPieces () );
-        //输出页眉的内容
         System.out.println ( "页眉：" + extractor.getHeaderText () );
-        //输出页脚的内容
         System.out.println ( "页脚：" + extractor.getFooterText () );
         //输出当前word文档的元数据信息，包括作者、文档的修改时间等。 
         System.out.println ( extractor.getMetadataTextExtractor ().getText () );
         //获取各个段落的文本
         String paraTexts[] = extractor.getParagraphText ();
         for ( int i = 0 ; i < paraTexts.length ; i++ ) {
-            System.out.println ( "Paragraph " + ( i + 1 ) + " : " + paraTexts[i] );
+            System.out.println ( "段落 " + ( i + 1 ) + " : " + paraTexts[i] );
         }
         SummaryInformation sInfo=extractor.getSummaryInformation();
         System.out.println("作者  :\t"+sInfo.getAuthor());  
