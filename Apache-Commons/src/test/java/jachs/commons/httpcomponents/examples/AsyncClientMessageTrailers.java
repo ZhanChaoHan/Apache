@@ -27,6 +27,7 @@ import org.apache.hc.core5.util.Timeout;
 /**
  * This example demonstrates how to use a custom execution interceptor
  * to add trailers to all outgoing request enclosing an entity.
+ * 此示例演示如何使用自定义执行拦截器向包含实体的所有传出请求添加尾部。
  */
 public class AsyncClientMessageTrailers {
 

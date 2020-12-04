@@ -16,6 +16,7 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 
 /**
  * Example how to use multipart/form encoded POST request.
+ * 示例如何使用多部分/表单编码的POST请求。
  */
 public class ClientMultipartFormPost {
 

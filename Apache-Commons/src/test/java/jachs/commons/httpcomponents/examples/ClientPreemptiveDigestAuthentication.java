@@ -19,6 +19,11 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
  * using the same Digest scheme. After the initial request / response exchange
  * all subsequent requests sharing the same execution context can re-use
  * the last Digest nonce value to authenticate with the server.
+ * 
+HttpClient如何对多个请求进行身份验证的示例
+使用相同的摘要方案。在初始请求/响应交换后
+共享同一执行上下文的所有后续请求都可以重用
+要向服务器进行身份验证的最后一个摘要nonce值。
  */
 public class ClientPreemptiveDigestAuthentication {
 

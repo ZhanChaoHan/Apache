@@ -18,6 +18,7 @@ import org.apache.hc.core5.http.io.support.ClassicRequestBuilder;
 /**
  * A example that demonstrates how HttpClient APIs can be used to perform
  * form-based logon.
+ * 一个示例，演示如何使用HttpClient api执行基于表单的登录。
  */
 public class ClientFormLogin {
 

@@ -12,7 +12,7 @@ import org.apache.hc.core5.http.protocol.HttpContext;
 
 /**
  * An example that performs GETs from multiple threads.
- *
+ *执行来自多个线程的get的示例。
  */
 public class ClientMultiThreadedExecution {
 

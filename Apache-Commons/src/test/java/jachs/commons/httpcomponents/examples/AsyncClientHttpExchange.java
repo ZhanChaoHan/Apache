@@ -15,6 +15,7 @@ import org.apache.hc.core5.util.Timeout;
 
 /**
  * Example of asynchronous HTTP/1.1 request execution.
+ * 异步HTTP/1.1请求执行示例。
  */
 public class AsyncClientHttpExchange {
 

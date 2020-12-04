@@ -32,6 +32,7 @@ import org.apache.hc.core5.util.Timeout;
 
 /**
  * This example demonstrates a full-duplex, streaming HTTP/1.1 message exchange.
+ * 这个例子演示了一个全双工的流式HTTP/1.1消息交换。
  */
 public class AsyncClientFullDuplexExchange {
 

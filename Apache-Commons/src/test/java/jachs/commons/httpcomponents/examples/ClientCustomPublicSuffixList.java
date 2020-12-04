@@ -22,6 +22,7 @@ import org.apache.hc.core5.ssl.SSLContexts;
 
 /**
  * This example demonstrates how to use a custom public suffix list.
+ * 此示例演示如何使用自定义公共后缀列表。
  */
 public class ClientCustomPublicSuffixList {
 

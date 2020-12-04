@@ -22,6 +22,7 @@ import org.apache.hc.core5.util.Timeout;
 
 /**
  * This example demonstrates pipelined execution of multiple HTTP/1.1 message exchanges.
+ * 这个例子演示了多个HTTP/1.1消息交换的流水线执行。
  */
 public class AsyncClientHttp1Pipelining {
 

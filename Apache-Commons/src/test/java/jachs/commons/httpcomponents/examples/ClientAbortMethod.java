@@ -7,6 +7,7 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 
 /**
  * This example demonstrates how to abort an HTTP method before its normal completion.
+ * 这个例子演示了如何在HTTP方法正常完成之前中止它。
  */
 public class ClientAbortMethod {
 

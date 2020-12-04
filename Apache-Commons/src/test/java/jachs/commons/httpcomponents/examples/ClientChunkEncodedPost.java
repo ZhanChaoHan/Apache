@@ -13,6 +13,7 @@ import org.apache.hc.core5.http.io.entity.InputStreamEntity;
 
 /**
  * Example how to use unbuffered chunk-encoded POST request.
+ * 示例如何使用无缓冲块编码的POST请求。
  */
 public class ClientChunkEncodedPost {
 

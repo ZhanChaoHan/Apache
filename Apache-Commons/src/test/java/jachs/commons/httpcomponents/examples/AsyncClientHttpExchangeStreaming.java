@@ -20,6 +20,7 @@ import org.apache.hc.core5.util.Timeout;
 
 /**
  * Example of asynchronous HTTP/1.1 request execution with response streaming.
+ * 使用响应流的异步HTTP/1.1请求执行示例。
  */
 public class AsyncClientHttpExchangeStreaming {
 

@@ -23,6 +23,7 @@ import org.apache.hc.core5.util.Timeout;
 /**
  * This example demonstrates concurrent (multiplexed) execution of multiple
  * HTTP/2 message exchanges.
+ * 这个例子演示了多个HTTP/2消息交换的并发（多路）执行。
  */
 public class AsyncClientH2Multiplexing {
 

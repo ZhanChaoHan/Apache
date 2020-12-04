@@ -15,6 +15,7 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 /**
  * This example demonstrates the use of a local HTTP context populated with
  * custom attributes.
+ * 此示例演示如何使用填充  自定义属性。
  */
 public class ClientCustomContext {
 

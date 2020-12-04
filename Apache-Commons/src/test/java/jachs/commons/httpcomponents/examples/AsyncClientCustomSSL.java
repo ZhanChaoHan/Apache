@@ -55,6 +55,7 @@ import org.apache.hc.core5.ssl.TrustStrategy;
 /**
  * This example demonstrates how to create secure connections with a custom SSL
  * context.
+ * 此示例演示如何使用自定义SSL创建安全连接上下文
  */
 public class AsyncClientCustomSSL {
 

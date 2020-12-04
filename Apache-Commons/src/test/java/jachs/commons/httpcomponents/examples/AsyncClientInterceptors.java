@@ -36,6 +36,7 @@ import org.apache.hc.core5.util.Timeout;
 /**
  * This example demonstrates how to insert custom request interceptor and an execution interceptor
  * to the request execution chain.
+ * 此示例演示如何插入自定义请求拦截器和执行拦截器到请求执行链。
  */
 public class AsyncClientInterceptors {
 

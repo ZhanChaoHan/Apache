@@ -13,6 +13,7 @@ import org.apache.hc.core5.http.HttpHost;
 
 /**
  * Example code for using {@link ProxyClient} in order to establish a tunnel through an HTTP proxy.
+ * 使用{@linkproxyclient}通过HTTP代理建立隧道的示例代码。
  */
 public class ProxyTunnelDemo {
 

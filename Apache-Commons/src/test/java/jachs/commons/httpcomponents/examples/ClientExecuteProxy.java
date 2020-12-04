@@ -11,7 +11,7 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 
 /**
  * How to send a request via proxy.
- *
+ *如何通过代理发送请求
  * @since 4.0
  */
 public class ClientExecuteProxy {

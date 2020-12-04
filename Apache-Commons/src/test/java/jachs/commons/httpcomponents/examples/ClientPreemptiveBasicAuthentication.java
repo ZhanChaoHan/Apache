@@ -17,6 +17,7 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
  * Generally, preemptive authentication can be considered less
  * secure than a response to an authentication challenge
  * and therefore discouraged.
+ * 如何定制HttpClient进行身份验证的示例抢先使用基本方案。一般来说，抢占式身份验证可以考虑较少比响应身份验证质询更安全因此气馁。
  */
 public class ClientPreemptiveBasicAuthentication {
 

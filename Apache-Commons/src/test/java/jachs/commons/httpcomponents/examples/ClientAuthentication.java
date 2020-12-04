@@ -12,6 +12,8 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 /**
  * A simple example that uses HttpClient to execute an HTTP request against
  * a target site that requires user authentication.
+ * 使用HttpClient对执行HTTP请求的简单示例
+ * 需要用户身份验证的目标站点。
  */
 public class ClientAuthentication {
 

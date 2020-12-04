@@ -11,8 +11,8 @@ import org.apache.hc.core5.pool.PoolStats;
 import org.apache.hc.core5.util.TimeValue;
 
 /**
- * Example demonstrating how to evict expired and idle connections
- * from the connection pool.
+ * Example demonstrating how to evict expired and idle connections from the connection pool.
+ * 演示如何从连接池中逐出过期和空闲连接的示例。
  */
 public class ClientEvictExpiredConnections {
 

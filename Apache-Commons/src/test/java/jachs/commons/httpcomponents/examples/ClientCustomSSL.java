@@ -21,8 +21,8 @@ import org.apache.hc.core5.ssl.SSLContexts;
 import org.apache.hc.core5.ssl.TrustStrategy;
 
 /**
- * This example demonstrates how to create secure connections with a custom SSL
- * context.
+ * This example demonstrates how to create secure connections with a custom SSL context.
+ * 此示例演示如何使用自定义SSL上下文创建安全连接。
  */
 public class ClientCustomSSL {
 

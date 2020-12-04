@@ -38,7 +38,8 @@ import org.apache.hc.core5.http.HttpEntity;
 /**
  * This example demonstrates the recommended way of using API to make sure
  * the underlying connection gets released back to the connection manager.
- * 
+ * 这个例子演示了使用API来确保
+ * 基础连接被释放回连接管理器。
  * @see http://hc.apache.org/httpcomponents-client-5.0.x/httpclient5/examples/ClientConnectionRelease.java
  */
 public class ClientConnectionRelease {

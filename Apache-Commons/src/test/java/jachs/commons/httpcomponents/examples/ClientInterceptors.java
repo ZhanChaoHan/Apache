@@ -27,6 +27,7 @@ import org.apache.hc.core5.http.protocol.HttpContext;
 /**
  * This example demonstrates how to insert custom request interceptor and an execution interceptor
  * to the request execution chain.
+ * 这个例子演示了如何在请求执行链中插入自定义请求拦截器和执行拦截器。
  */
 public class ClientInterceptors {
 

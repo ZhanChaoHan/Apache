@@ -28,6 +28,7 @@ import org.apache.hc.core5.util.Timeout;
 
 /**
  * This example demonstrates handling of HTTP/2 message exchanges pushed by the server.
+ * 此示例演示如何处理服务器推送的HTTP/2消息交换。
  */
 public class AsyncClientH2ServerPush {
 

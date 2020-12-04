@@ -21,7 +21,7 @@ import org.apache.hc.core5.util.TimeValue;
 
 /**
  * How to send a request via SOCKS proxy.
- *
+ *如何通过SOCKS代理发送请求。
  * @since 4.1
  */
 public class ClientExecuteSOCKS {

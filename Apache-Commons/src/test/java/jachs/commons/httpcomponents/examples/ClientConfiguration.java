@@ -87,6 +87,7 @@ import org.apache.hc.core5.util.Timeout;
 /**
  * This example demonstrates how to customize and configure the most common aspects
  * of HTTP request execution and connection management.
+ * 这个例子演示了如何定制和配置最常见的方面HTTP请求执行和连接管理。
  * @see http://hc.apache.org/httpcomponents-client-5.0.x/httpclient5/examples/ClientConfiguration.java
  */
 public class ClientConfiguration {

@@ -24,6 +24,7 @@ import org.apache.hc.core5.io.CloseMode;
 /**
  * This example demonstrates how to avoid the illegal reflective access operation warning
  * when running with Oracle JRE 9 or newer.
+ * 此示例演示如何避免非法反射访问操作警告,运行Oracle JRE 9或更新版本。
  */
 public class AsyncClientTlsAlpn {
 
