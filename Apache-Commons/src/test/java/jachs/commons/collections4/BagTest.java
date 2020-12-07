@@ -5,9 +5,9 @@ import org.junit.Test;
 /***
  * 
  * @author zhanchaohan
- *@see https://commons.apache.org/proper/commons-collections/javadocs/api-4.4/index.html
+ * @see https://commons.apache.org/proper/commons-collections/javadocs/api-4.4/index.html
  */
-public class Collections4Test {
+public class BagTest {
 	@Test
 	public void collections4Test() {
 		
