@@ -64,7 +64,6 @@ public class AsyncClientCustomSSL {
         final SSLContext sslcontext = SSLContexts.custom()
                 .loadTrustMaterial(new TrustStrategy() {
 
-                    @Override
                     public boolean isTrusted(
                             final X509Certificate[] chain,
                             final String authType) throws CertificateException {
@@ -121,12 +120,10 @@ public class AsyncClientCustomSSL {
                             }
                         }
 
-                        @Override
                         public void failed(final Exception ex) {
                             System.out.println(requestUri + "->" + ex);
                         }
 
-                        @Override
                         public void cancelled() {
                             System.out.println(requestUri + " cancelled");
                         }

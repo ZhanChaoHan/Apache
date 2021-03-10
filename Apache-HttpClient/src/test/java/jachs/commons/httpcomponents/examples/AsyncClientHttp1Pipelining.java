@@ -51,20 +51,17 @@ public class AsyncClientHttp1Pipelining {
                         SimpleResponseConsumer.create(),
                         new FutureCallback<SimpleHttpResponse>() {
 
-                            @Override
                             public void completed(final SimpleHttpResponse response) {
                                 latch.countDown();
                                 System.out.println(requestUri + "->" + response.getCode());
                                 System.out.println(response.getBody());
                             }
 
-                            @Override
                             public void failed(final Exception ex) {
                                 latch.countDown();
                                 System.out.println(requestUri + "->" + ex);
                             }
 
-                            @Override
                             public void cancelled() {
                                 latch.countDown();
                                 System.out.println(requestUri + " cancelled");
