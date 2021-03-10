@@ -20,8 +20,9 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.13</version>
 		</dependency>
+		<!-- 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -37,6 +38,7 @@
 			<artifactId>httpclient5</artifactId>
 			<version>5.0.3</version>
 		</dependency>
+		-->
 		<!-- commons-httpclient 是 apache-commons 项目下的一个子项目，后来被 HttpComponents 取代，后者提供了更好的性能和更大的灵活性。其最新版本为3.1，且已经不再更新； -->
 		<dependency>
 			<groupId>commons-httpclient</groupId>

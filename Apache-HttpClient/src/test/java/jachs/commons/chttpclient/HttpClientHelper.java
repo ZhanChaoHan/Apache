@@ -8,6 +8,7 @@ import org.apache.commons.httpclient.methods.StringRequestEntity;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 
 import java.io.IOException;
+import org.junit.Test;
 
 /**
  * @author zhanchaohan
@@ -76,11 +77,14 @@ public class HttpClientHelper {
         }
         return null;
     }
-
-    public static void main ( String[] args ) {
+    @Test
+    public void testPost() {
         String url = "https://jiashubing.cn/tencenttest";
         String param = "{\"aaa\":\"bbbbbbb\"}";
         sendPost ( url, param );
+    }
+    @Test
+    public void testGet() {
         String urlParam = "https://jiashubing.cn/talk/document?fileid=1234";
         sendGet ( urlParam );
     }
