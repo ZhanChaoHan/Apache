@@ -79,13 +79,13 @@ public class HttpClientHelper {
     }
     @Test
     public void testPost() {
-        String url = "https://jiashubing.cn/tencenttest";
+        String url = "http://localhost:8080/postT1?pam1=ccc&pam2=dadawd";
         String param = "{\"aaa\":\"bbbbbbb\"}";
         sendPost ( url, param );
     }
     @Test
     public void testGet() {
-        String urlParam = "https://jiashubing.cn/talk/document?fileid=1234";
+        String urlParam = "http://localhost:8080/getT1?pam1=ccc&pam2=dadawd";
         sendGet ( urlParam );
     }
 
