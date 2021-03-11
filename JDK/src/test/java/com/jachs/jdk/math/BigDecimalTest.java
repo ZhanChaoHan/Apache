@@ -88,12 +88,12 @@ public class BigDecimalTest {
         double value2=9.1234567890123;
         BigDecimal value3=new BigDecimal(Double.toString(value1));
         BigDecimal value4=new BigDecimal(Double.toString(value2));
-        System.out.println("精确加法================="+ArithUtil.add(value1, value2));
-        System.out.println("精确减法================="+ArithUtil.sub(value1, value2));
-        System.out.println("精确乘法================="+ArithUtil.mul(value1, value2));
-        System.out.println("精确除法 使用默认精度 ================="+ArithUtil.div(value1, value2));
-        System.out.println("精确除法  设置精度================="+ArithUtil.div(value1, value2,20));
-        System.out.println("四舍五入   小数点后保留几位 ================="+ArithUtil.round(value1, 10));
-        System.out.println("比较大小 ================="+ArithUtil.equalTo(value3, value4));
+        System.out.println("精确加法================="+BigDecimalUtil.add(value1, value2));
+        System.out.println("精确减法================="+BigDecimalUtil.sub(value1, value2));
+        System.out.println("精确乘法================="+BigDecimalUtil.mul(value1, value2));
+        System.out.println("精确除法 使用默认精度 ================="+BigDecimalUtil.div(value1, value2));
+        System.out.println("精确除法  设置精度================="+BigDecimalUtil.div(value1, value2,20));
+        System.out.println("四舍五入   小数点后保留几位 ================="+BigDecimalUtil.round(value1, 10));
+        System.out.println("比较大小 ================="+BigDecimalUtil.equalTo(value3, value4));
     }
 }
