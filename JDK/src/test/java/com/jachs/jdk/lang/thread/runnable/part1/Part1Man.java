@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 /***
  * 
- * @author zhanchaohan
- *
+ * @author zhanchaohan </br>
+ *         简单多线程模拟大数据处理
  */
 public class Part1Man {
 	public static void main(String[] args) throws InterruptedException {
@@ -15,8 +15,7 @@ public class Part1Man {
 			aList.add(kk + "条消息");
 		}
 		/***
-		 * 五条线程耗时如下
-		 * Thread-3 2579 </br>
+		 * 五条线程耗时如下 Thread-3 2579 </br>
 		 * Thread-4 2579 </br>
 		 * Thread-1 2586 </br>
 		 * Thread-2 2587 </br>
