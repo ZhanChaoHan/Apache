@@ -12,7 +12,7 @@ import org.junit.Test;
 
 /**
  * @author zhanchaohan
- * 
+ * @see jachs.commons.Application  start server
  */
 public class HttpClientHelper {
 
@@ -24,7 +24,6 @@ public class HttpClientHelper {
      */
     public static String sendPost ( String url , String paramJson ) {
         System.out.println ( "开始发起POST请求，请求地址为" + url + "，参数为" + paramJson );
-        // 创建httpClient实例对象
         HttpClient httpClient = new HttpClient ();
         // 设置httpClient连接主机服务器超时时间：15000毫秒
         httpClient.getHttpConnectionManager ().getParams ().setConnectionTimeout ( 15000 );
@@ -56,7 +55,6 @@ public class HttpClientHelper {
      */
     public static String sendGet ( String urlParam ) {
         System.out.println ( "开始发起GET请求，请求地址为" + urlParam );
-        // 创建httpClient实例对象
         HttpClient httpClient = new HttpClient ();
         // 设置httpClient连接主机服务器超时时间：15000毫秒
         httpClient.getHttpConnectionManager ().getParams ().setConnectionTimeout ( 15000 );
@@ -81,12 +79,14 @@ public class HttpClientHelper {
     public void testPost() {
         String url = "http://localhost:8080/postT1?pam1=ccc&pam2=dadawd";
         String param = "{\"aaa\":\"bbbbbbb\"}";
-        sendPost ( url, param );
+        String result=sendPost ( url, param );
+        System.out.println(result);
     }
     @Test
     public void testGet() {
-        String urlParam = "http://localhost:8080/getT1?pam1=ccc&pam2=dadawd";
-        sendGet ( urlParam );
+        String urlParam = "http://localhost:8080/getT1?pam1=gtr&pam2=cdq";
+        String result=sendGet ( urlParam );
+        System.out.println(result);
     }
 
 }
