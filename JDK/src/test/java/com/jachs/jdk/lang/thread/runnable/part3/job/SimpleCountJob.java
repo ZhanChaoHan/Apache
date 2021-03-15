@@ -1,6 +1,6 @@
 package com.jachs.jdk.lang.thread.runnable.part3.job;
 
-import com.jachs.jdk.lang.thread.runnable.part3.Part3Man;
+import com.jachs.jdk.lang.thread.runnable.part3.SynchronizedBlock;
 
 /***
  * 
@@ -8,10 +8,17 @@ import com.jachs.jdk.lang.thread.runnable.part3.Part3Man;
  *
  */
 public class SimpleCountJob implements Runnable{
+	private SynchronizedBlock synchronizedBlock;
+	
+	
+	public SimpleCountJob(SynchronizedBlock synchronizedBlock) {
+		super();
+		this.synchronizedBlock = synchronizedBlock;
+	}
+
 
 	public void run() {
-		Part3Man p3 = new Part3Man();
-		p3.Count();
+		synchronizedBlock.Count();
 	}
 
 }

@@ -1,13 +1,20 @@
 package com.jachs.jdk.lang.thread.runnable.part3.job;
 
-import com.jachs.jdk.lang.thread.runnable.part3.Part3Man;
+import com.jachs.jdk.lang.thread.runnable.part3.SynchronizedBlock;
 
 public class BiddingJob implements Runnable {
+	SynchronizedBlock synchronizedBlock;
+	
+	
+	public BiddingJob(SynchronizedBlock synchronizedBlock) {
+		super();
+		this.synchronizedBlock = synchronizedBlock;
+	}
+
 
 	public void run() {
-		Part3Man p3 = new Part3Man();
 		while (true) {
-			p3.Bidding();
+			synchronizedBlock.Bidding();
 			try {
 				Thread.sleep(1000);// 休眠方便控制台打印
 			} catch (InterruptedException e) {
