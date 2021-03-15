@@ -2,6 +2,11 @@ package com.jachs.jdk.lang.thread.runnable.part3;
 
 import java.util.Random;
 
+/***
+ * 对象方法同步
+ * @author zhanchaohan
+ *
+ */
 public class SynchronizedBlock {
 	private static Long countMonery = 0L;
 	private static String lastCustomer = null;
