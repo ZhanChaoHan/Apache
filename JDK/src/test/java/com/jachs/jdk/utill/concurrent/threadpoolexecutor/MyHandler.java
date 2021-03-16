@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class MyHandler implements RejectedExecutionHandler {
 
 	public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
-
+		System.out.println("出现异常:"+r.toString()+executor.toString());
 	}
 
 }
