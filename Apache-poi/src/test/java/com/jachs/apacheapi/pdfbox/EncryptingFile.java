@@ -41,7 +41,7 @@ public class EncryptingFile {
 		// Apply protection
 		doc.protect(spp);
 
-		doc.save("filename-encrypted.pdf");
+		doc.save(EncryptingFile.class.getResource("").getPath()+File.separator+"filename-encrypted.pdf");
 		doc.close();
 	}
 }
