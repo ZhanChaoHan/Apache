@@ -11,6 +11,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
@@ -78,19 +79,19 @@ public class CreateTest {
 	      System.out.println("Properties added successfully ");
 	      //Closing the document
 	}
-	//先运行test2创建PDF,添加文本
+	//添加文本
 	@Test
 	public void test3() throws Exception {
-		document = document.load(new File(testFilePath+File.separator+"test2.pdf"));
-		PDPage page = document.getPage(0);
+        PDPage page = new PDPage(PDRectangle.A4);
+        document.addPage(page);
 		PDPageContentStream contentStream = new PDPageContentStream(document, page);
 		
 		
-		PDFont formFont = PDType0Font.load(document,new FileInputStream("C:\\Windows\\Fonts\\mingliub.ttc"), false);
+//		PDFont formFont = PDType0Font.load(document,new FileInputStream("C:\\Windows\\Fonts\\mingliub.ttc"), false);
 		
 		contentStream.beginText();//开始写入文本
 //		contentStream.setFont(formFont, 12);
-		contentStream.setFont(PDType1Font.HELVETICA_BOLD, 12);
+		contentStream.setFont(PDType1Font.TIMES_ROMAN, 12);
 		
 		contentStream.newLineAtOffset(25, 500);//设置文本位置
 		contentStream.showText("abc一二三");

@@ -20,7 +20,6 @@ public class CreatePdf {
             document = new PDDocument();
             PDPage page = new PDPage(PDRectangle.A4);
             document.addPage(page);
-            System.out.println();
             
             PDFont font = PDType1Font.HELVETICA_BOLD;
             PDPageContentStream contentStream = new PDPageContentStream(document, page);
