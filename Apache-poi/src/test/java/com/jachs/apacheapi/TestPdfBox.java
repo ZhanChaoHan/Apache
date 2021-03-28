@@ -14,7 +14,7 @@ public class TestPdfBox {
     @Test
     public void readTest () throws IOException {
         int startPage = 1;
-        PDDocument document = PDDocument.load ( TestPdfBox.class.getResourceAsStream ( "/pdf/英语大纲词汇（4500词）.pdf" ) );
+        PDDocument document = PDDocument.load ( TestPdfBox.class.getResourceAsStream ( "/pdf/vocabulary.pdf" ) );
         int endPage = null == document ? Integer.MAX_VALUE : document.getNumberOfPages ();
         PDFTextStripper stripper = new PDFTextStripper ();
         stripper.setSortByPosition ( true );
