@@ -25,5 +25,16 @@ public class HttpClientTest {
         String result=httpClientUtill.sendGet ( urlParam );
         System.out.println(result);
     }
-
+    @Test
+    public void test3() {
+        String urlParam = "http://localhost:8080/human";
+        String result=httpClientUtill.sendGet ( urlParam );
+        System.out.println(result);
+    }
+    @Test
+    public void test4() {
+        String urlParam = "http://localhost:8080/listhuman";
+        String result=httpClientUtill.sendGet ( urlParam );
+        System.out.println(result);
+    }
 }
