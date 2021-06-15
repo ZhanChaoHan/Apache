@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+
 import org.apache.commons.imaging.ImageReadException;
 import org.apache.commons.imaging.Imaging;
 import org.apache.commons.imaging.common.ImageMetadata;
@@ -16,6 +17,7 @@ import org.apache.commons.imaging.formats.tiff.constants.ExifTagConstants;
 import org.apache.commons.imaging.formats.tiff.constants.GpsTagConstants;
 import org.apache.commons.imaging.formats.tiff.constants.TiffTagConstants;
 import org.apache.commons.imaging.formats.tiff.taginfos.TagInfo;
+import org.junit.Test;
 
 public class MetadataExample {
 	public static void metadataExample(final File file) throws ImageReadException, IOException {
@@ -126,4 +128,10 @@ public class MetadataExample {
 		}
 	}
 
+	String testImage = ImageReadExample.class.getResource("/").getPath();
+
+	@Test
+	public void test1() throws ImageReadException, IOException {
+		metadataExample(new File(testImage + File.separator + "best.png"));
+	}
 }

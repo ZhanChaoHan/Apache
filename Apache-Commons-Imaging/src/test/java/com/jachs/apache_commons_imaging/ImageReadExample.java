@@ -10,10 +10,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.imaging.ImageReadException;
 import org.apache.commons.imaging.Imaging;
 import org.apache.commons.imaging.ImagingConstants;
 import org.apache.commons.imaging.common.BufferedImageFactory;
+import org.junit.Test;
 
 public class ImageReadExample {
 	public static BufferedImage imageReadExample(final File file) throws ImageReadException, IOException {
@@ -42,5 +45,12 @@ public class ImageReadExample {
 		public BufferedImage getGrayscaleBufferedImage(final int width, final int height, final boolean hasAlpha) {
 			return getColorBufferedImage(width, height, hasAlpha);
 		}
+	}
+	String testImage=ImageReadExample.class.getResource("/").getPath();
+	
+	@Test
+	public void test1() throws ImageReadException, IOException {
+		BufferedImage bi=imageReadExample(new File(testImage+File.separator+"best.png"));
+		ImageIO.write(bi,"png",new File(testImage+File.separator+"best1.png"));
 	}
 }
