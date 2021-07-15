@@ -31,10 +31,11 @@ data:image/x-icon;base64,base64编码的icon图片数据</br>
  * 
  */
 public class Base64Demo {
+	Base64 base=new Base64 ();
+	
     @Test
     public void testEn() throws IOException {
         Writer fw=new FileWriter (Base64Demo.class.getResource ( "" ).getPath ()+File.separator+"as.html" );
-        Base64 base=new Base64 ();
         byte []en= base.encode ( IOUtils.resourceToByteArray ( "/files/image/testImage.jpg" )  );
         System.out.println ( new String ( en ) );
         
@@ -114,7 +115,7 @@ public class Base64Demo {
                 "gIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIg//Z\r\n" + 
                 "\r\n";
         OutputStream os=new FileOutputStream(Base64Demo.class.getResource ( "" ).getPath ()+File.separator+"as.jpg");
-        Base64 base=new Base64 ();
+        
         
         os.write (  base.decode ( enStr.getBytes ()));
         os.close ();
