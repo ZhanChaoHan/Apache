@@ -38,7 +38,7 @@ public class Demo {
     //
     @Test
     public void testContent() throws FileNotFoundException, IOException {
-        //判断二个文件是否是一个数据源
+      //判断二个文件是否是一个数据源
       Boolean equle= IOUtils.contentEquals ( new FileInputStream ( Demo.class.getResource ( "/files/myFile.txt" ).getPath ()), new FileInputStream ( Demo.class.getResource ( "/files" ).getPath ()+File.separator+"copyFile.txt" ) );
       System.out.println ( equle );
       Boolean equleT= IOUtils.contentEquals ( new FileInputStream ( Demo.class.getResource ( "/files/myFile.txt" ).getPath ()), new FileInputStream ( Demo.class.getResource ( "/files/myFile.txt" ).getPath ()) );
