@@ -14,11 +14,11 @@ import com.jachs.apache.excel.read.ReadExcelUtill;
 
 
 /***
- * 
+ * 设置表达式
  * @author zhanchaohan
  *
  */
-public class TestExcell {
+public class TestFormulaExcell {
 	@Test
 	public void testWrite() throws IOException {
 		CreateExcelUtill createExcelUtill = new CreateExcelUtill();
