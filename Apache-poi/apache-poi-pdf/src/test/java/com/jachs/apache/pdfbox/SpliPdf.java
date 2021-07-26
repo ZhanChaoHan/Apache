@@ -18,7 +18,8 @@ public class SpliPdf {
 	@Test
 	public void test() throws Exception {
 		// Loading an existing PDF document
-		File file = new File(SpliPdf.class.getResource("/pdf/vocabulary.pdf").getPath());
+//		File file = new File(SpliPdf.class.getResource("/pdf/vocabulary.pdf").getPath());
+		File file = new File("G:\\A\\A.pdf");
 		PDDocument document = PDDocument.load(file);
 		// Instantiating Splitter class
 		Splitter splitter = new Splitter();
@@ -30,7 +31,8 @@ public class SpliPdf {
 		int i = 1;
 		while (iterator.hasNext()) {
 			PDDocument pd = iterator.next();
-			pd.save(SpliPdf.class.getResource("").getPath()+File.separator+ i++ + ".pdf");
+//			pd.save(SpliPdf.class.getResource("").getPath()+File.separator+ i++ + ".pdf");
+			pd.save(new File("G:\\A\\"+i++ + ".pdf"));
 		}
 		System.out.println("Multiple PDF’s created");
 		document.close();
