@@ -46,6 +46,6 @@ public class PdfToWord {
 	@Test
 	public void test1() {
 		PdfToWord convert = new PdfToWord();
-		convert.convertText("G:\\A\\vocabulary.pdf");
+		convert.convertText("C:\\Users\\Jachs\\Desktop\\设计模式之禅（完整版）.pdf");
 	}
 }
