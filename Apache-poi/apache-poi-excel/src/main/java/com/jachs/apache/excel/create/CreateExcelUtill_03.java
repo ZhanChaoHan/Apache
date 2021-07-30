@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
 /***
@@ -33,6 +34,11 @@ public class CreateExcelUtill_03 implements CreateExcelUtill{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}	
+	}
+
+	public Sheet createShell(String shellName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

@@ -2,6 +2,8 @@ package com.jachs.apache.excel.create;
 
 import java.io.OutputStream;
 
+import org.apache.poi.sl.usermodel.Sheet;
+
 /****
  * 
  * @author zhanchaohan
@@ -10,7 +12,7 @@ import java.io.OutputStream;
 public interface CreateExcelUtill {
 	//写入
 	public void writerExcel(OutputStream stream);
-	
+	public Sheet createShell(String shellName) ;
 //	HSSFWorkbook wb = new HSSFWorkbook();
 //	
 //	public CreateExcelUtill () {
