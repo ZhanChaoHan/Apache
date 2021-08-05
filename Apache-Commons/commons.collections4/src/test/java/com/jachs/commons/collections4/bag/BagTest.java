@@ -1,4 +1,4 @@
-package com.jachs.commons.collections4;
+package com.jachs.commons.collections4.bag;
 
 import org.apache.commons.collections4.Bag;
 import org.apache.commons.collections4.BidiMap;

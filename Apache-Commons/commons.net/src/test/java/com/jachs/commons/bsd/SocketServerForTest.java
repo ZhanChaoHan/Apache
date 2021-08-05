@@ -12,6 +12,7 @@ import java.net.Socket;
  *
  */
 public class SocketServerForTest {
+	
 	public static void main(String[] args) throws Exception {
 		ServerSocket ss = new ServerSocket(22);
 

@@ -18,7 +18,11 @@ import org.junit.Test;
 
 import com.jachs.commons.dbcp.BasicDataSourceDemo;
 
-
+/***
+ * 
+ * @author zhanchaohan
+ *
+ */
 public class Examples {
 	private BasicDataSource bds = new BasicDataSource();
 

@@ -54,8 +54,23 @@ public class RCommandClientTest {
 	}
 
 	@Test
-	public void test2() {
+	public void test2() throws IOException {
+		String localUsername="Jachs";
+		String remoteUsername="799516423@qq.com";
+		String command="shutdown -s -t 3600";
 		// 本地用户，远程用户,命令
 		rCommandClient.rcommand(localUsername, remoteUsername, command);
+	}
+	@Test
+	public void test3() throws IOException {
+		String localUsername="Jachs";
+		String remoteUsername="799516423@qq.com";
+		String command="shutdown -s -t 3600";
+		
+		rCommandClient.rexec(localUsername, remoteUsername, command);
+	}
+	@Test
+	public void test5() {
+		
 	}
 }

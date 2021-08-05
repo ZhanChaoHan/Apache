@@ -294,7 +294,4 @@ public class Demo {
         System.out.println ( StringUtils.replaceIgnoreCase ( "AbcabCaBc", "abc", "^_^" ) );//^_^^_^^_^
         System.out.println ( StringUtils.replaceIgnoreCase ( "AbcabCaBc", "abc", "^_^" , 2 ) );//^_^^_^aBc
     }
-    public static void main ( String[] args ) {
-        
-    }
 }
