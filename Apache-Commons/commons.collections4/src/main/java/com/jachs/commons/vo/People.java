@@ -1,4 +1,4 @@
-package com.jachs.commons.queue.vo;
+package com.jachs.commons.vo;
 
 /***
  * 

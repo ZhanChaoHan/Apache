@@ -3,7 +3,7 @@ package com.jachs.commons.collections4.queue;
 import org.apache.commons.collections4.queue.CircularFifoQueue;
 import org.junit.Test;
 
-import com.jachs.commons.queue.vo.People;
+import com.jachs.commons.vo.People;
 
 /***
  * 
