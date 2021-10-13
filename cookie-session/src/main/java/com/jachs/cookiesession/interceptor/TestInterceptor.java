@@ -1,5 +1,6 @@
 package com.jachs.cookiesession.interceptor;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -28,6 +29,11 @@ public class TestInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		System.out.println("preHandle方法在控制器的处理请求方法调用之后，解析视图之前执行");
+		
+		Cookie[] ckList=request.getCookies();
+		if(ckList==null||ckList.length==0) {
+			return false;
+		}
 		return true;
 	}
 }

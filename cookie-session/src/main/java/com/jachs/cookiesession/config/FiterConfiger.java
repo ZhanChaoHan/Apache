@@ -11,7 +11,7 @@ import com.jachs.cookiesession.filter.TestFilter;
  * @author zhanchaohan
  *
  */
-@Configuration
+//@Configuration
 public class FiterConfiger {
 	@Bean
     public FilterRegistrationBean registFilter() {

@@ -21,7 +21,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(this.getMyInterceptor()).addPathPatterns("/*")
-		.excludePathPatterns("/aa/a");
+		registry.addInterceptor(this.getMyInterceptor()).addPathPatterns("/**")
+		.excludePathPatterns("/session/readAllCookie");
 	}
 }
