@@ -16,6 +16,7 @@ import java.util.*;
  
 /**
  * 压缩文件下载工具类。用于将多文件文件压缩后，提供给 ServletOutputStream 输出流共用户网页下载
+ * @author zhanchaohan
  */
 @SuppressWarnings("all")
 public class ZipFileDownloadUtils {
