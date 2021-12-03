@@ -22,4 +22,18 @@ public class CommandUtilsTest {
 		String str=cu.exeCommand("notepad");
 		System.out.println(str);
 	}
+	@Test
+	public void test3() throws IOException {
+		String filePath=CommandUtilsTest.class.getClass().getResource("/test.bat").getPath();
+		
+		String str=cu.exeCommand(filePath);
+		System.out.println(str);
+	}
+	@Test
+	public void test5() throws IOException {
+		String filePath=CommandUtilsTest.class.getClass().getResource("/test-parm.bat").getPath();
+		
+		String str=cu.exeCommand(filePath+" Whom_I_AM");
+		System.out.println(str);
+	}
 }
