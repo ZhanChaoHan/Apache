@@ -12,7 +12,7 @@ import com.jachs.cookiesession.interceptor.TestInterceptor;
  * @author zhanchaohan
  *
  */
-@Configuration
+//@Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
 	@Bean
 	public TestInterceptor getMyInterceptor() {
