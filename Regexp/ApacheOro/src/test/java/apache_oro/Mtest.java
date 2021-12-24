@@ -1,4 +1,4 @@
-package apacheOro;
+package apache_oro;
 
 import org.apache.oro.text.regex.MalformedPatternException;
 import org.apache.oro.text.regex.MatchResult;
@@ -33,6 +33,7 @@ public class Mtest {
 		       System.out.println(result);
 		}
 	}
+	
 	@Test
 	public void test2() throws MalformedPatternException {
 		String exactMatch = "23";
