@@ -17,7 +17,7 @@ public class PreferencesTest {
     // 把相应的值储存到变量中去
     @Test
     public void writeValue() {
-        // HKEY_LOCAL_MACHINE\Software\JavaSoft\prefs下写入注册表值.
+        //HKEY_LOCAL_MACHINE\Software\JavaSoft\prefs下写入注册表值.
         Preferences pre = Preferences.systemRoot().node("/javaplayer");
         for (int i = 0; i < keys.length; i++) {
             pre.put(keys[i], values[i]);
@@ -31,7 +31,9 @@ public class PreferencesTest {
     @Test
     public void getValue() {
         Preferences pre = Preferences.systemRoot().node("/javaplayer");
-        System.out.println(pre.get("version", "time"));
+        System.out.println(pre.get("version", "def"));
+        System.out.println(pre.get("initial", "def"));
+        System.out.println(pre.get("creator", "def"));
     }
  
     /***
