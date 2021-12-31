@@ -8,6 +8,7 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.methods.RequestEntity;
 import org.apache.commons.httpclient.methods.StringRequestEntity;
 import org.apache.commons.httpclient.params.HttpMethodParams;
+import org.apache.commons.httpclient.protocol.Protocol;
 
 /***
  * @author zhanchaohan
@@ -23,7 +24,13 @@ public class HttpClientUtill {
 	 * @param paramJson 参数的json格式
 	 */
 	public String sendPost(String url, String paramJson) {
+		if(url.startsWith("https")){  
+	       //https请求
+	       Protocol myhttps = new Protocol("https", new MySSLProtocolSocketFactory(),443);
+	       Protocol.registerProtocol("https", myhttps);
+	    }
 		HttpClient httpClient = new HttpClient();
+		
 		httpClient.getHttpConnectionManager().getParams().setConnectionTimeout(CONNECTIONTIMEOUT);
 		PostMethod postMethod = new PostMethod(url);
 		postMethod.getParams().setParameter(HttpMethodParams.SO_TIMEOUT, PARAMETERTIMEOUT);
@@ -48,6 +55,11 @@ public class HttpClientUtill {
 	 * @param urlParam url请求，包含参数
 	 */
 	public String sendGet(String urlParam) {
+		if(urlParam.startsWith("https")){  
+         //https请求
+         Protocol myhttps = new Protocol("https", new MySSLProtocolSocketFactory(),443);
+         Protocol.registerProtocol("https", myhttps);
+        }  
 		HttpClient httpClient = new HttpClient();
 		httpClient.getHttpConnectionManager().getParams().setConnectionTimeout(CONNECTIONTIMEOUT);
 		GetMethod getMethod = new GetMethod(urlParam);

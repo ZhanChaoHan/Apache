@@ -28,4 +28,5 @@ public class HttpClientGetTest {
         String result=httpClientUtill.sendGet ( urlParam+parmStr );
         System.out.println(result);
     }
+    
 }
