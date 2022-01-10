@@ -14,21 +14,21 @@ import org.junit.Test;
  *
  */
 public class AddImage {
-	private String projectPath = SimpleCreateTest.class.getResource("").getPath();
+	private String projectPath = SimpleCreateTest.class.getResource("/").getPath();
 
 	@Test
 	public void test1() throws Exception {
-		File file = new File(projectPath + File.separator + "test2.pdf");
+		File file = new File(projectPath+ File.separator + "test2.pdf");
 		PDDocument doc = PDDocument.load(file);
 		
 		PDPage page = doc.getPage(0);
-		PDImageXObject pdImage = PDImageXObject.createFromFile(projectPath + File.separator + "test.png", doc);
+		PDImageXObject pdImage = PDImageXObject.createFromFile(AddImage.class.getResource("/imager/test.png").getPath(), doc);
 		
 		PDPageContentStream contentStream = new PDPageContentStream(doc, page);
 		//写入图片设置宽高
 		contentStream.drawImage(pdImage, 50, 50);
 		contentStream.close();
-		doc.save(projectPath + File.separator + "test2.pdf");
+		doc.save(projectPath + File.separator + "imager.pdf");
 		doc.close();
 	}
 }

@@ -12,7 +12,7 @@ import org.junit.Test;
  *
  */
 public class SimpleCreateTest {
-	private String projectPath = SimpleCreateTest.class.getResource("").getPath();
+	private String projectPath = SimpleCreateTest.class.getResource("/").getPath();
 
 	@Test
 	public void test1() throws Exception {
