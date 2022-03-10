@@ -6,7 +6,6 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.junit.Test;
 
-import java.awt.image.BufferedImage;
 import java.io.*;
 
 /***
