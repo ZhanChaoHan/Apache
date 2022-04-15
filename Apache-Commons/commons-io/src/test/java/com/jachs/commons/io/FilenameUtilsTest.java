@@ -63,4 +63,12 @@ public class FilenameUtilsTest {
 	public void getPrefixLength() {
 		System.out.println(FilenameUtils.getPrefixLength("e:\\a\\c"));
 	}
+	//获取文件后缀
+	@Test
+	public void getExtension() {
+		System.out.println(FilenameUtils.getExtension("anc.html"));
+		System.out.println(FilenameUtils.getExtension("anc.pdf"));
+		System.out.println(FilenameUtils.getExtension("anc.xml"));
+		System.out.println(FilenameUtils.getExtension("anc.c"));
+	}
 }
