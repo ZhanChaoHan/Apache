@@ -2,6 +2,7 @@ package com.jachs.commons.base64;
 
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -36,7 +37,9 @@ public class Base64Demo {
     @Test
     public void testEn() throws IOException {
         Writer fw=new FileWriter (Base64Demo.class.getResource ( "" ).getPath ()+File.separator+"as.html" );
-        byte []en= base.encode ( IOUtils.resourceToByteArray ( "/files/image/testImage.jpg" )  );
+//        byte []en= base.encode ( IOUtils.resourceToByteArray ("/files/image/testImage.jpg"));
+        
+        byte []en= base.encode ( IOUtils.toByteArray (new FileInputStream("D:/opt/upFiles\\6d35e179cd814e3299bd588ea7daed3f\\_BackgroundImage_.jpg")));
         System.out.println ( new String ( en ) );
         
         fw.write ( "<image src='data:image/jpeg;base64,"+new String ( en )+"'>" );
