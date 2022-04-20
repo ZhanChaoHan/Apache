@@ -1,4 +1,4 @@
-package com.jachs.apache.docx.read;
+package com.jachs.apache.docx.transformation;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -56,7 +56,7 @@ public class DocToHtml {
 	 * @param htmlName
 	 * @throws Exception
 	 */
-	public  void dox(String filePath, String fileName, String htmlName) throws Exception {
+	public  void doc(String filePath, String fileName, String htmlName) throws Exception {
 		final String file = filePath + fileName;
 		InputStream input = new FileInputStream(new File(file));
 		HWPFDocument wordDocument = new HWPFDocument(input);

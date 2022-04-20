@@ -13,7 +13,9 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<poi.version>4.1.2</poi.version>
+		<poi.version>3.10-FINAL</poi.version>
+		<poi.tem>2.0.3</poi.tem>
+		<poi.cov>1.0.6</poi.cov>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -21,31 +23,31 @@
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
 			<artifactId>fr.opensagres.xdocreport.document</artifactId>
-			<version>1.0.5</version>
+			<version>${poi.tem}</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
 			<artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>
-			<version>1.0.5</version>
+			<version>${poi.cov}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
 			<artifactId>fr.opensagres.xdocreport.document</artifactId>
-			<version>1.0.5</version>
+			<version>${poi.tem}</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
 			<artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>
-			<version>1.0.5</version>
+			<version>${poi.cov}</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-scratchpad</artifactId>
 			<version>${poi.version}</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
