@@ -1,4 +1,4 @@
-package com.jachs.apache.docx;
+package com.jachs.apache.docx.read;
 
 import java.io.IOException;
 
