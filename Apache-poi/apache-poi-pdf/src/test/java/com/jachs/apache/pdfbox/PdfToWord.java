@@ -12,7 +12,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.junit.Test;
 
 /**
- * 
+ * pdf转word
  * @author zhanchaohan
  *
  */
@@ -46,6 +46,6 @@ public class PdfToWord {
 	@Test
 	public void test1() {
 		PdfToWord convert = new PdfToWord();
-		convert.convertText("C:\\Users\\Jachs\\Desktop\\设计模式之禅（完整版）.pdf");
+		convert.convertText("C:\\Users\\79951\\Desktop\\a\\保密协议-最新.pdf");
 	}
 }
