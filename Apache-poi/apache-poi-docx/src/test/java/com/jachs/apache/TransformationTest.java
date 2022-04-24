@@ -11,7 +11,7 @@ public class TransformationTest {
     @Test
     public void DocToHtmlTest () throws Exception {
         //        dth.docx ( "e:\\", "index.docx", "index.html" );
-    	 dth.doc( "C:\\Users\\79951\\Desktop\\a\\", "b.doc", "b.html" );
+    	 dth.doc( "C:\\Users\\79951\\Desktop\\a\\", "保密协议-最新.doc", "b.html" );
     }
     @Test
     public void DocxToHtmlTest() throws Exception {

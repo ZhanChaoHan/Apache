@@ -30,17 +30,6 @@
 			<artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>
 			<version>${poi.cov}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>fr.opensagres.xdocreport</groupId>
-			<artifactId>fr.opensagres.xdocreport.document</artifactId>
-			<version>${poi.tem}</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.opensagres.xdocreport</groupId>
-			<artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>
-			<version>${poi.cov}</version>
-		</dependency>
 		
 		<dependency>
 			<groupId>org.apache.poi</groupId>
