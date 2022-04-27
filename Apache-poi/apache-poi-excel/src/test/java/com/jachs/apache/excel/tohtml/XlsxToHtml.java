@@ -23,7 +23,7 @@ import org.junit.Test;
  *
  */
 public class XlsxToHtml {
-	private static String filePath="C:\\Users\\79951\\Desktop\\sucai\\aa.xlsx";
+	private static String filePath="C:\\Users\\79951\\Desktop\\sucai\\（流产用）北京市申领生育津贴人员信息登记表.xls";
 	private static String htmlPath="C:\\Users\\79951\\Desktop\\a.html";
 	
 	BufferedWriter bw;
@@ -92,7 +92,7 @@ public class XlsxToHtml {
 						printLine(cell.getCellFormula());	
 						break;
 					case BLANK :
-//						printLine("                    \n");	
+						printLine("___\n");	
 						break;
 					case BOOLEAN :
 						printLine(cell.getBooleanCellValue()+"");	

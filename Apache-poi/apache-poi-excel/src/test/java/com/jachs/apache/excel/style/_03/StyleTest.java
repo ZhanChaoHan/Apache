@@ -35,7 +35,7 @@ public class StyleTest {
 //		CellStyle cellStyle=workbook.getCellStyleAt(0);
 		Font font=workbook.getFontAt(style.getFontIndex());
 		printFont(font);
-		
+		printStyle(style);
 	}
 	//字体
 	private void printFont(Font font) {
@@ -53,8 +53,14 @@ public class StyleTest {
 		System.out.println("Strikeout\t"+font.getStrikeout());
 	}
 	private void printStyle(CellStyle style) {
+		System.out.println("-------------------Style--------------------------------");
 		style.getAlignment();//单元格水平对齐
 		style.getAlignmentEnum();//单元格的水平对齐
 		
+		
+		System.out.println(style.getBorderBottom().name());
+		System.out.println(style.getBorderBottom().getCode());
+		
+		System.out.println("BottomBorderColor\t"+style.getBottomBorderColor());
 	}
 }
