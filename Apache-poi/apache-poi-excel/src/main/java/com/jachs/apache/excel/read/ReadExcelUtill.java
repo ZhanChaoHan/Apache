@@ -7,12 +7,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /***
  * 
@@ -24,16 +22,16 @@ public class ReadExcelUtill {
     private final static String xlsx = "xlsx";  
     private static Workbook workbook = null;
     
-    public   ReadExcelUtill(File file) {  
-        try {  
-            InputStream is = new FileInputStream(file);  
-            if(file.getName().endsWith(xls)){  
-                //2003  
-                workbook = new HSSFWorkbook(is);  
-            }else if(file.getName().endsWith(xlsx)){  
-                //2007  
-                workbook = new XSSFWorkbook(is);  
-            }  
+    public   ReadExcelUtill(File file) {
+        try {
+            InputStream is = new FileInputStream(file);
+            if(file.getName().endsWith(xls)){
+                //2003
+                workbook = new org.apache.poi.hssf.usermodel.HSSFWorkbook(is);
+            }else if(file.getName().endsWith(xlsx)){
+                //2007
+                workbook = new org.apache.poi.xssf.usermodel.XSSFWorkbook(is);
+            }
         } catch (IOException e) {
         	e.printStackTrace();
         }  

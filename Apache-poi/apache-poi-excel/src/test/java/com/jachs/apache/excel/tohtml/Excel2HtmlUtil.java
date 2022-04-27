@@ -1,19 +1,41 @@
 package com.jachs.apache.excel.tohtml;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFDataFormat;
+import org.apache.poi.hssf.usermodel.HSSFDateUtil;
+import org.apache.poi.hssf.usermodel.HSSFFont;
+import org.apache.poi.hssf.usermodel.HSSFPalette;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.VerticalAlignment;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import java.io.*;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.*;
 
 /***
  * 
@@ -40,16 +62,17 @@ public class Excel2HtmlUtil {
                 File sourcefile = new File(filePath);
                 is = new FileInputStream(sourcefile);
                 Workbook wb = WorkbookFactory.create(is);
-                if (wb instanceof XSSFWorkbook) { // 03版excel处理方法
+                if (wb instanceof XSSFWorkbook) {//03版excel处理方法
                     XSSFWorkbook xWb = (XSSFWorkbook) wb;
                     htmlExcel = getExcelInfo(xWb, isWithStyle, stylemap);
-                } else if (wb instanceof HSSFWorkbook) { // 07及10版以后的excel处理方法
+                } else if (wb instanceof HSSFWorkbook) {//07及10版以后的excel处理方法
                     HSSFWorkbook hWb = (HSSFWorkbook) wb;
                     htmlExcel = getExcelInfo(hWb, isWithStyle, stylemap);
                 }
                 writeFile(htmlExcel, htmlPositon, stylemap, htmlTitle);
             }
         } catch (Exception e) {
+        	e.printStackTrace();
             System.out.println("文件被损坏或不能打开，无法预览");
             //throw new Exception("文件被损坏或不能打开，无法预览");
         } finally {
