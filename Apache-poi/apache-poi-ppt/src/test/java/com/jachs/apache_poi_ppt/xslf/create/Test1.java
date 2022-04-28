@@ -1,4 +1,4 @@
-package com.jachs.apache_poi_ppt.create;
+package com.jachs.apache_poi_ppt.xslf.create;
 
 import java.awt.geom.Rectangle2D;
 import java.io.File;
@@ -20,7 +20,9 @@ import org.apache.poi.xslf.usermodel.XSLFTextBox;
  *
  */
 public class Test1 {
-
+	private static String imagePath="C:\\Users\\79951\\Desktop\\sucai\\1_Q)}ZL33{)1YJ`WGGH64(Q.jpg";
+	private static String pptPath="D:\\ppt8.pptx";
+	
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		XMLSlideShow ppt = new XMLSlideShow();
         // 创建幻灯片
@@ -33,7 +35,7 @@ public class Test1 {
 		textBox.addNewTextParagraph().addNewTextRun().setText("创建PPT");
 		// 插入图片
 		// 获取图片的file对象
-        File file = new File("D:\\8.png");
+        File file = new File(imagePath);
         // 获取字节流
         byte[] bt = FileUtils.readFileToByteArray(file);
         XSLFPictureData idx = ppt.addPicture(bt, PictureData.PictureType.PNG);
@@ -47,8 +49,9 @@ public class Test1 {
         textBox2.setAnchor(new Rectangle2D.Double(300,50, 100, 50));
         textBox2.addNewTextParagraph().addNewTextRun().setText("创建ppt2");
         // 写入ppt中
-        ppt.write(new FileOutputStream("D:\\ppt8.pptx"));
+        ppt.write(new FileOutputStream(pptPath));
 
+        ppt.close();
 	}
 
 }
