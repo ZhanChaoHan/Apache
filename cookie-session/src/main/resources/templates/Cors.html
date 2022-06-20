@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>srpingboot</title>
+</head>
+<script th:src="@{jquery.min.js}" type="application/javascript"></script>
+<body>
+	<button onclick="kuayu()">点击测试跨域</button>
+</body>
+
+<script type="text/javascript">
+	function kuayu(){
+		 $.get("http://127.0.0.1:8081/cors/getUser",function(data,status){
+		        alert("数据: " + data + "\n状态: " + status);
+		 });
+	}
+</script>
+</html>
